@@ -20,7 +20,7 @@ componentDidMount() {
     this.loginStatus()
   }
 loginStatus = () => {
-    axios.get('http://localhost:3001/logged_in', {withCredentials: true})
+    axios.get('https://rails-client-api.herokuapp.com/logged_in', {withCredentials: true})
     .then(response => {
       if (response.data.logged_in) {
         this.handleLogin(response)

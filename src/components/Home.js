@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const Home = (props) => {
 const handleClick = () => {
-    axios.delete('http://localhost:3001/logout', {withCredentials: true})
+    axios.delete('https://rails-client-api.herokuapp.com/logout', {withCredentials: true})
     .then(response => {
       props.handleLogout()
       props.history.push('/')
