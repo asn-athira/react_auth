@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios'
-import {Link} from 'react-router-dom'
+//import axios from 'axios'
+//import {Link} from 'react-router-dom'
 import './Dashboard.css'
 import Header from './Header'
 import Sidebar from './Sidebar'

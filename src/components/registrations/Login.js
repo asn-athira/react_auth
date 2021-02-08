@@ -8,7 +8,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      username: '',
+      
       email: '',
       password: '',
       errors: ''
@@ -25,10 +25,9 @@ handleChange = (event) => {
   };
 handleSubmit = (event) => {
     event.preventDefault()
-    const {username, email, password} = this.state
+    const {email, password} = this.state
 let user = {
-      username: username,
-      email: email,
+            email: email,
       password: password
     }
     
@@ -61,7 +60,7 @@ handleErrors = () => {
     )
   }
 render() {
-    const {username, email, password} = this.state
+    const {email, password} = this.state
 return (
       <div>
         <Navbar />
