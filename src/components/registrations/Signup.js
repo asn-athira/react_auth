@@ -31,7 +31,7 @@ handleSubmit = (event) => {
       password_confirmation: password_confirmation
     }
 //axios.post('http://localhost:3001/users', {user}, {withCredentials: true})
-axios.post('https://rails-client-api.herokuapp.com/users', {user}, {withCredentials: true})
+axios.post('https://rails-client-api.herokuapp.com/users', {user}, {headers:{"Content-Type" : "application/json"}}, {withCredentials: true})
 
     .then(response => {
       if (response.data.status === 'created') {
