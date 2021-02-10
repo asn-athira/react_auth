@@ -11,6 +11,9 @@ const handleClick = () => {
     })
     .catch(error => console.log(error))
   }
+  const messageView = () => {
+    axios.delete('https://rails-client-api.herokuapp.com/home')
+  }
 return (
    
     <div>
@@ -25,7 +28,9 @@ return (
               <li className="nav-item">
                 <Link className="nav-link" to={"/signup"}>Sign up</Link>
               </li>
-              { 
+              <li className="nav-item">
+                <Link className="nav-link" to={"/signup"}>{messageView}</Link>
+              </li>              { 
                 props.loggedInStatus ? 
                 <li className="nav-item">
                 <Link className="nav-link" onClick={handleClick} to={"/logout"}>Log Out</Link> 
